@@ -1,0 +1,129 @@
+﻿html {
+  color: #333333; 
+  font-family: "Helvetica Neue",  "Arial", sans-serif; 
+  font-weight: normal; 
+  font-size: 100%;
+  -ms-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
+}
+
+body { 
+    font-size: 1rem; 
+    line-height: 1.625; 
+    margin: 0; 
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+/* Client Site Base Typography */
+$base-font-size: 16px;
+$base-font-color: #767676;
+
+$primary-font: "sofia-pro",sans-serif;
+$primary-font-style: normal;
+$primary-font-weight: 400;
+$primary-bold-weight: 700;
+
+$heading-font: "lato",sans-serif;
+$heading-font-style: normal;
+$heading-font-weight: 700;
+$heading-font-color: #253535;
+
+$list-disc-color: #01fcdc;
+
+html {
+    font-size: 100%;
+}
+
+
+body {
+    font-family: $primary-font;
+    font-weight: $primary-font-weight;
+    font-style: $primary-font-style;
+    font-size: $base-font-size;
+    color: $base-font-color;
+    line-height: 1.625;
+}
+
+a {
+    display: inline-block;
+    margin: 0 0.5em;
+    padding: 0.5em 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $heading-font;
+    //font-family: 'Lato', sans-serif;
+    font-weight: $heading-font-weight;
+    font-style: $heading-font-style;
+    color: $heading-font-color;
+        margin: 0 0 0.5em 0;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1.2em;
+
+    @media all and (min-width: 600px){
+        font-size: 50px;
+    }
+
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 2.75em;
+
+    @media all and (min-width: 600px){
+        font-size: 40px;
+    }
+
+}
+
+h3 {
+    font-size: 25px;
+    line-height: 1.15em;
+
+    @media all and (min-width: 600px){
+        font-size: 30px;
+    }
+
+}
+
+h4 {
+    font-size: 20px;
+    @media all and (min-width: 600px){
+        font-size: 24px;
+    }
+}
+
+
+h5 {
+    font-size: 17px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 1.6875rem;
+}
+
+
+
+p {
+    line-height: 1.6875rem;
+    margin: 0.75em 0;
+}
+
+em {
+    font-style: italic;
+}
+
+small {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+ul {
+    list-style-type: none;
+}
