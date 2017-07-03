@@ -1,4 +1,6 @@
 ﻿html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
     overflow-y: scroll;
@@ -8,6 +10,8 @@
 }
 
 *, *:before, *:after {
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 
@@ -19,29 +23,21 @@ body {
 #wrapper {
     min-height: 100%;
     position: relative;
+    background: #fff;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+
+    &.active {
+        -moz-transform: translateX(-30%);
+        -ms-transform: translateX(-30%);
+        -o-transform: translateX(-30%);
+        -webkit-transform: translateX(-30%);
+        transform: translateX(-30%);
+    }
 }
 
-.main {
-    padding-bottom: 20px; /* This is the height of the footer */
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 10px 0;
-    width: 100%;
-    background: #808080;
-    color: #fff;
-    border-top: 1px solid #00D494;
-}
-
-.container {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 65em;
-    overflow: hidden;
-}
 
 /* Helper class */
 .visually-hidden {
