@@ -61,6 +61,8 @@ table {
 }
 
 html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
   overflow-y: scroll;
@@ -70,6 +72,8 @@ html {
 }
 
 *, *:before, *:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -82,10 +86,16 @@ body {
   min-height: 100%;
   position: relative;
   background: #fff;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
 #wrapper.active {
+  -moz-transform: translateX(-30%);
+  -ms-transform: translateX(-30%);
+  -o-transform: translateX(-30%);
   -webkit-transform: translateX(-30%);
   transform: translateX(-30%);
 }
@@ -219,50 +229,4 @@ ul {
   list-style-type: none;
 }
 
-header[role="banner"] {
-  display: block;
-  width: 100%;
-  background: #dedede;
-  padding: 30px 0;
-}
-
-main {
-  padding-bottom: 20px;
-  /* This is the height of the footer */
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 65em;
-  overflow: hidden;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 10px 0;
-  width: 100%;
-  background: #808080;
-  color: #fff;
-  border-top: 1px solid #00D494;
-}
-
-#content {
-  display: block;
-  width: 70%;
-}
-
-aside {
-  display: block;
-  width: 30%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  bottom: 0;
-  background: #808080;
-  z-index: -1;
-}
 /*# sourceMappingURL=test.css.map */
