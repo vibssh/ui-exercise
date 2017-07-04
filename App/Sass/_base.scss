@@ -24,18 +24,6 @@ body {
     min-height: 100%;
     position: relative;
     background: #fff;
-    -moz-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
-
-    &.active {
-        -moz-transform: translateX(-30%);
-        -ms-transform: translateX(-30%);
-        -o-transform: translateX(-30%);
-        -webkit-transform: translateX(-30%);
-        transform: translateX(-30%);
-    }
 }
 
 

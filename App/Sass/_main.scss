@@ -77,11 +77,12 @@ main {
 
 //2a. ContentWrapper
 #content-wrapper {
-    padding-bottom: 8em; //This gives area above the footer
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
     @media all and (min-width: 768px) {
         display: table;
-        width: 100%;
-        position: relative;
         table-layout: fixed;
     }
 }
@@ -92,7 +93,7 @@ main {
     display: block;
     text-align: center;
     //background: #a4a4a4; This color was there as part of first exercise to show clearly the content area and sidebar area. In exercise 2 we have some design so removing the background colour
-    padding: 1em 0;
+    padding: 1em 0 6em;
 
     @media all and (min-width: 768px) {
         width: $content-width;
@@ -107,13 +108,24 @@ main {
 
 //4. Aside / Sidebar Area
 aside {
-    width: 100%;
-    display: none; // As per the Exercise 3
     text-align: center;
     background: #8e8e8e;
     padding: 1em 0;
-
-
+    width: 100%;
+    display: block; //As per Exercise 3
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
 
     @media all and (min-width: 768px) {
         width: 0;
@@ -122,13 +134,33 @@ aside {
         -o-transition: width .2s linear;
         -webkit-transition: width .2s linear;
         transition: width .2s linear;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        position: unset;
+        top: initial;
+        bottom: initial;
     }
 
+
+
     &.active {
-        display: block;
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+
         @media all and (min-width: 768px) {
             display: table-cell;
             width: $sidebar-width;
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            -webkit-transform: none;
+            transform: none;
         }
     }
 }

@@ -14,7 +14,7 @@ var _MobileMenu = (function() {
     var settings = {
         $menuBtn: $('.mobile-menu'),
         $nav: $('nav'),
-        $navLink: $('nav').find('a')
+        $navLink: $('nav').find('a:not(.toggle-sidebar)')
     };
 
     //Event Handlers 
@@ -61,7 +61,6 @@ var _ToggleSideBar = (function() {
 
     var bindUIActions = function() {
         settings.$toggleSidebarBtn.on('click', function () {
-            console.info(settings.$sideBar);
             settings.$sideBar.toggleClass('active');
         });
     };
