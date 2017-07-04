@@ -79,7 +79,7 @@ var _ToggleSideBar = (function() {
 
 
 
-//Initializing the Mobile Menu on the 
+//Initializing the Methods
 window.onload = function() {
     _MobileMenu.init();
     _ToggleSideBar.init(); // As per exercise 3
