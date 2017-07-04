@@ -108,15 +108,36 @@ main {
 //4. Aside / Sidebar Area
 aside {
     width: 100%;
-    display: block;
+    display: none; // As per the Exercise 3
     text-align: center;
     background: #8e8e8e;
     padding: 1em 0;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
 
     @media all and (min-width: 768px) {
         width: $sidebar-width;
-        display: table-cell;
-       
+        //display: table-cell; //As per Exercise 3
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    &.active {
+        display: block;
+
+        @media all and (min-width: 768px) {
+            display: table-cell;
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
     }
 }
 
