@@ -308,6 +308,7 @@ main {
     display: table;
     width: 100%;
     position: relative;
+    table-layout: fixed;
   }
 }
 
@@ -335,35 +336,22 @@ aside {
   text-align: center;
   background: #8e8e8e;
   padding: 1em 0;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
 }
 
 @media all and (min-width: 768px) {
   aside {
-    width: 30%;
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+    width: 0;
+    display: table-cell;
+    -moz-transition: width 0.2s linear;
+    -o-transition: width 0.2s linear;
+    -webkit-transition: width 0.2s linear;
+    transition: width 0.2s linear;
   }
-}
-
-aside.active {
-  display: block;
 }
 
 @media all and (min-width: 768px) {
   aside.active {
-    display: table-cell;
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    width: 30%;
   }
 }
 

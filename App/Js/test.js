@@ -35,7 +35,41 @@ var _MobileMenu = (function() {
 
 }());
 
+
+
+/* Toggle SideBar */
+var _ToggleSideBar = (function() {
+    'use strict';
+
+    //Cache the Elements
+    var settings = {
+        $toggleSidebarBtn: $('.toggle-sidebar'),
+        $sideBar: $('aside')
+    };
+
+    var bindUIActions = function() {
+        settings.$toggleSidebarBtn.on('click', function () {
+            console.info(settings.$sideBar);
+            settings.$sideBar.toggleClass('active');
+        });
+    };
+
+    var init = function() {
+        bindUIActions();
+    };
+
+
+    return {
+        init: init
+}
+
+}());
+
+
+
+
 //Initializing the Mobile Menu on the 
 window.onload = function() {
     _MobileMenu.init();
+    _ToggleSideBar.init(); // As per exercise 3
 };
