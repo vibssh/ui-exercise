@@ -303,24 +303,30 @@ main {
   padding-bottom: 8em;
 }
 
+@media all and (min-width: 768px) {
+  #content-wrapper {
+    display: table;
+    width: 100%;
+    position: relative;
+  }
+}
+
 #content {
   width: 100%;
   display: block;
   text-align: center;
-  background: #a4a4a4;
   padding: 1em 0;
 }
 
 @media all and (min-width: 768px) {
   #content {
     width: 70%;
-    display: inline-block;
-    float: left;
+    display: table-cell;
   }
 }
 
 #content p {
-  color: #fff;
+  color: #505050;
 }
 
 aside {
@@ -334,12 +340,11 @@ aside {
 @media all and (min-width: 768px) {
   aside {
     width: 30%;
-    display: inline-block;
-    float: left;
+    display: table-cell;
   }
 }
 
-aside p {
+p {
   color: #fff;
 }
 
@@ -356,6 +361,46 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.card {
+  margin: 0;
+  padding: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media all and (min-width: 768px) {
+  .card {
+    max-width: 960px;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.card .card-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 33.33%;
+  -webkit-flex: 1 0 33.33%;
+  flex: 1 0 33.33%;
+  padding: 0 1rem;
+}
+
+.card .card-item-link {
+  text-decoration: none;
+}
+
+.card .card-item-title {
+  text-align: left;
+}
+
+.card .card-item-description {
+  text-align: left;
 }
 
 /*# sourceMappingURL=test.css.map */

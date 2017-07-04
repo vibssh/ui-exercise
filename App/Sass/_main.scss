@@ -20,7 +20,7 @@ header[role="banner"] {
         font-style: normal;
         text-transform: uppercase;
     }
-     
+
     .mobile-menu {
         display: inline-block;
         background: #808080;
@@ -78,6 +78,11 @@ main {
 //2a. ContentWrapper
 #content-wrapper {
     padding-bottom: 8em; //This gives area above the footer
+    @media all and (min-width: 768px) {
+        display: table;
+        width: 100%;
+        position: relative;
+    }
 }
 
 //3. Content Area
@@ -85,39 +90,42 @@ main {
     width: 100%;
     display: block;
     text-align: center;
-    background: #a4a4a4;
+    //background: #a4a4a4; This color was there as part of first exercise to show clearly the content area and sidebar area. In exercise 2 we have some design so removing the background colour
     padding: 1em 0;
 
-    @media all and (min-width: 768px){
+    @media all and (min-width: 768px) {
         width: $content-width;
-        display: inline-block;
-        float: left;
+        display: table-cell;
     }
+
     p {
-        color: #fff;
+        color: #505050;
     }
 }
 
 
- 
+
 //4. Aside / Sidebar Area
 aside {
     width: 100%;
     display: block;
     text-align: center;
-    background:#8e8e8e;
+    background: #8e8e8e;
     padding: 1em 0;
 
-    @media all and (min-width: 768px){
+    @media all and (min-width: 768px) {
         width: $sidebar-width;
-        display: inline-block;
-        float: left;
-    }
-
-    p{
-        color: #fff;
+        display: table-cell;
+       
     }
 }
+
+p {
+    color: #fff;
+}
+
+
+
 
 //5. Footer
 footer {
@@ -130,9 +138,7 @@ footer {
     color: #fff;
     border-top: 1px solid #00D494;
 
-    p{
+    p {
         text-align: center;
     }
 }
-
-

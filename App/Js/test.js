@@ -36,8 +36,6 @@ var _MobileMenu = (function() {
 }());
 
 //Initializing the Mobile Menu on the 
-if ($(window).width() <= 1023) {
-    $(document).ready(function() {
-        _MobileMenu.init();
-    });
-}
+window.onload = function() {
+    _MobileMenu.init();
+};

@@ -1,0 +1,39 @@
+﻿//Card Module
+.card {
+    margin: 0;
+    padding: 1em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    @media all and (min-width: 768px){
+        max-width: 960px;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .card-item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 33.33%;
+        -webkit-flex: 1 0 33.33%;
+        flex: 1 0 33.33%;
+        padding: 0 1rem;
+    }
+
+    .card-item-link {
+        text-decoration: none;
+
+    }
+
+    .card-item-title {
+        text-align: left;
+    }
+
+    .card-item-description {
+        text-align: left;
+    }
+}
