@@ -13,7 +13,8 @@ var _MobileMenu = (function() {
     //Cache the elements
     var settings = {
         $menuBtn: $('.mobile-menu'),
-        $nav: $('nav')
+        $nav: $('nav'),
+        $navLink: $('nav').find('a')
     };
 
     //Event Handlers 
@@ -22,6 +23,17 @@ var _MobileMenu = (function() {
             e.preventDefault();
             settings.$nav.slideToggle();
         });
+
+        
+            settings.$navLink.on('click', function (e) {
+                e.preventDefault();
+                if ($(window).width() <= 767) {
+                    settings.$nav.slideToggle();
+                }
+                
+            });
+        
+        
     };
 
     //Public Method
