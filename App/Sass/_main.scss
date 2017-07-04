@@ -1,5 +1,6 @@
 ﻿//Main Styles - Try to keep the order of the elements as they appear in the HTML Mark up. Don't nest too many items to make them tighly coupled
 
+
 //1. Header
 header[role="banner"] {
     display: block;
@@ -19,7 +20,7 @@ header[role="banner"] {
         font-style: normal;
         text-transform: uppercase;
     }
-
+     
     .mobile-menu {
         display: inline-block;
         background: #808080;
@@ -80,10 +81,43 @@ main {
 }
 
 //3. Content Area
+#content {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: #a4a4a4;
+    padding: 1em 0;
+
+    @media all and (min-width: 768px){
+        width: $content-width;
+        display: inline-block;
+        float: left;
+    }
+    p {
+        color: #fff;
+    }
+}
 
 
+ 
 //4. Aside / Sidebar Area
+aside {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background:#8e8e8e;
+    padding: 1em 0;
 
+    @media all and (min-width: 768px){
+        width: $sidebar-width;
+        display: inline-block;
+        float: left;
+    }
+
+    p{
+        color: #fff;
+    }
+}
 
 //5. Footer
 footer {
@@ -102,15 +136,3 @@ footer {
 }
 
 
-
-//Common Element
-.container {
-    width: 95%; /* This allows some space around the border of the devices on the mobile */
-    margin: 0 auto;
-    max-width: 65em;
-    overflow: hidden;
-
-    @media all and (min-width: 1023px) {
-        width: 100%;
-    }
-}

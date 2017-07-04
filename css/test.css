@@ -303,6 +303,46 @@ main {
   padding-bottom: 8em;
 }
 
+#content {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: #a4a4a4;
+  padding: 1em 0;
+}
+
+@media all and (min-width: 768px) {
+  #content {
+    width: 70%;
+    display: inline-block;
+    float: left;
+  }
+}
+
+#content p {
+  color: #fff;
+}
+
+aside {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: #8e8e8e;
+  padding: 1em 0;
+}
+
+@media all and (min-width: 768px) {
+  aside {
+    width: 30%;
+    display: inline-block;
+    float: left;
+  }
+}
+
+aside p {
+  color: #fff;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -316,20 +356,6 @@ footer {
 
 footer p {
   text-align: center;
-}
-
-.container {
-  width: 95%;
-  /* This allows some space around the border of the devices on the mobile */
-  margin: 0 auto;
-  max-width: 65em;
-  overflow: hidden;
-}
-
-@media all and (min-width: 1023px) {
-  .container {
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=test.css.map */
